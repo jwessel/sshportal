@@ -60,7 +60,7 @@ func DBInit(db *gorm.DB) error {
 			Migrate: func(tx *gorm.DB) error {
 				type Host struct {
 					gorm.Model
-					Name        string `gorm:"size:32"`
+					Name        string `gorm:"size:48"`
 					Addr        string
 					User        string
 					Password    string
@@ -380,7 +380,7 @@ func DBInit(db *gorm.DB) error {
 			Migrate: func(tx *gorm.DB) error {
 				type Host struct {
 					gorm.Model
-					Name        string                `gorm:"size:32" valid:"required,length(1|32),unix_user"`
+					Name        string                `gorm:"size:48" valid:"required,length(1|32),unix_user"`
 					Addr        string                `valid:"required"`
 					User        string                `valid:"optional"`
 					Password    string                `valid:"optional"`
@@ -440,7 +440,7 @@ func DBInit(db *gorm.DB) error {
 			Migrate: func(tx *gorm.DB) error {
 				type Host struct {
 					gorm.Model
-					Name     string `gorm:"size:32"`
+					Name     string `gorm:"size:48"`
 					Addr     string
 					User     string
 					Password string
@@ -461,7 +461,7 @@ func DBInit(db *gorm.DB) error {
 			Migrate: func(tx *gorm.DB) error {
 				type Host struct {
 					gorm.Model
-					Name     string `gorm:"size:32"`
+					Name     string `gorm:"size:48"`
 					Addr     string
 					User     string
 					Password string
@@ -484,7 +484,7 @@ func DBInit(db *gorm.DB) error {
 			Migrate: func(tx *gorm.DB) error {
 				type Host struct {
 					gorm.Model
-					Name     string `gorm:"size:32"`
+					Name     string `gorm:"size:48"`
 					Addr     string
 					User     string
 					Password string
